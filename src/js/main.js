@@ -45,7 +45,8 @@ document.querySelector(".load-more").addEventListener("click", async function ()
    }
 
    for (let i = currentIndex; i < maxIndex; i++) {
-      const img = await loadImageWithLoader(`https://picsum.photos/400?random=${i}`);
+      // const img = await loadImageWithLoader(`https://picsum.photos/400?random=${i}`);
+      const img = await loadImageWithLoader(`https://picsum.photos/3840/2160?random=${i}`);
 
       const item = document.createElement('div');
       item.className = "item";
