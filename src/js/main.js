@@ -10,7 +10,6 @@ function loadImageWithLoader(url) {
       };
 
       img.onerror = function () {
-         console.log("Image failed to load");
          reject('Image failed to load');
       };
 
@@ -21,7 +20,6 @@ async function displayImages() {
    try {
       for (let i = 0; i < items.length; i++) {
          const img = await loadImageWithLoader(`https://picsum.photos/400?random=${i}`);
-         console.log(`Image ${i+1} loaded successfully!`);
          items[i].appendChild(img);
          loaders[i].parentNode.removeChild(loaders[i]);
       }
@@ -43,7 +41,6 @@ document.querySelector(".load-more").addEventListener("click", async function ()
    const loaderss = document.getElementsByClassName('loader');
 
    if (currentIndex === maxIndex) {
-      console.log("No more images to load");
       return;
    }
 
