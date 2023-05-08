@@ -16,10 +16,11 @@ function loadImageWithLoader(url) {
       img.src = url;
    });
 }
+
 async function displayImages() {
    try {
       for (let i = 0; i < items.length; i++) {
-         const img = await loadImageWithLoader(`https://picsum.photos/400?random=${i}`);
+         const img = await loadImageWithLoader(`https://picsum.photos/3840/2160?random=${i}`);
          items[i].appendChild(img);
          loaders[i].parentNode.removeChild(loaders[i]);
       }
